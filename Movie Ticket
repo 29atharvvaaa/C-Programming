@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    int no_of_children_tickets, no_of_adult_tickets, no_of_seniorcitizen_tickets, noftickets, discount, totalamt;
+    printf("Number of Children Tickets: (Age <= 12).\n");
+    scanf("%d", &no_of_children_tickets);
+    printf("Number of Adults Tickets: (13 <= Age <= 60)\n");
+    scanf("%d", &no_of_adult_tickets);
+    printf("Number of Senior Citizen Tickets: (Age > 60)\n");
+    scanf("%d", &no_of_seniorcitizen_tickets);
+    noftickets = (no_of_children_tickets + no_of_adult_tickets + no_of_seniorcitizen_tickets);
+    printf("Total Number of Tickets Booked are: %d\n", noftickets);
+    totalamt = (no_of_children_tickets * 100) + (no_of_adult_tickets * 150) + (no_of_seniorcitizen_tickets * 120);
+    printf("Total Amount before Discount is Rs. %d\n", totalamt);
+    if (totalamt >= 1000) {
+        discount = totalamt/100*10;
+        totalamt = totalamt - discount;
+        printf("Your 10 percent Discount is Rs. %d\n", discount);
+        printf("Total Amount to be Paid after 10 percent Discount is Rs. %d\n", totalamt);
+        printf("Thankyou, Visit Again!\n");
+    }
+    else {
+        printf("Total Amount to be Paid is Rs. %d\n", totalamt);
+        printf("Thankyou, Visit Again!\n");
+    }
+    return 0;
+}
