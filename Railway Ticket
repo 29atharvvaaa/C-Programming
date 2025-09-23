@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() {
+    char name[50];
+    int class, tickets ,total_bill;
+    printf("Enter your Name:(ONLY FIRST NAME)\n");
+    scanf("%s", name);
+    printf("Enter number of Tickets:\n");
+    scanf("%d", &tickets);
+    printf("Enter Class Type: \n1 -> First Class AC.\n2 -> Second Class AC.\n3 -> Third Class AC.\n4 -> Sleeper Class.\n5 -> General Class.\n");
+    scanf("%d", &class);
+    if(class == 1) {
+        total_bill=tickets*5000;
+    }
+    else if(class == 2) {
+        total_bill=tickets*3500; 
+    }
+    else if(class == 3) {
+        total_bill=tickets*2000; 
+    }
+    else if(class == 4) {
+        total_bill=tickets*1000; 
+    }
+    else if(class == 5) {
+        total_bill=tickets*500; 
+    }
+    else {
+        printf("INVALID CLASS TYPE\n");
+    }
+    printf("Your Total Bill is Rs. %d\n", total_bill);
+    return 0;
+}
