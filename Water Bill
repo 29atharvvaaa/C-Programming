@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+    int per,litre;
+    char name;
+    printf("Enter your Name:-\n");
+    scanf("%s", &name);
+    printf("Enter Total Litres of Water Consumed: \n");
+    scanf("%d", &litre);
+    if (litre<=1000){
+        litre=(litre/100*2)+150;
+        printf("Your Water Bill is Rs. %d\n", litre);
+    }
+    else if (litre<=3000){
+        litre=(litre/100*3)+150;
+        printf("Your Water Bill is Rs. %d\n", litre);
+    }
+    else if (litre>=3001){
+        litre=(litre/100*5)+150;
+        printf("Your Water Bill is Rs. %d\n", litre);
+    }
+    else {
+        printf("INVALID INPUT\n");
+    }
+    if (litre>=500)
+    {
+        per=litre/100*10;
+        printf("You have to pay an additional 10 percent fine of Rs. %d\n", per);
+        litre=litre+per;
+        printf("Your Total Water Bill is Rs. %d\n", litre); 
+    }
+    return 0;
+}    
