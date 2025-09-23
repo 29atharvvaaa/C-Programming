@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    int income, tax;
+    printf("Enter your Total Annual Income:\n");
+    scanf("%d", &income);
+    if (income<=250000) {
+        tax=0;
+        printf("Your Total Annual Income Tax is Rs. %d\n", tax);
+        }
+        else if (income>=250001 && income<500000){
+            tax=income/100*5;
+            printf("Your Total Annual Income Tax is Rs. %d\n", tax);
+        }
+        else if (income>=500001 && income<1000000){
+            tax=income/100*5 + income/100*20;
+            printf("Your Total Annual Income Tax is Rs. %d\n", tax);
+        }
+        else if (income>=1000001){
+            tax=income/100*5 + income/100*20 + income/100*30;
+            printf("Your Total Annual Income Tax is Rs. %d\n", tax);
+        }
+    else {
+        printf("INVALID INPUT\n");
+    }
+    return 0;
+}
